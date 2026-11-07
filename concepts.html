@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tasarım Konseptleri Karşılaştırması – Fun By Accident</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <style>
+    :root {
+      --bg: #090a0f;
+      --card-bg: #12141c;
+      --border: rgba(255, 255, 255, 0.1);
+      --amber: #f59e0b;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      padding: 32px 20px 80px;
+    }
+    .wrapper { max-width: 1200px; margin: 0 auto; }
+    
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 14px;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      color: var(--amber);
+      border-radius: 99px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: 0.05em;
+    }
+    h1 {
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    p.lead {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* Comparison Grid */
+    .concepts-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+    @media (max-width: 900px) {
+      .concepts-grid { grid-template-columns: 1fr; }
+    }
+
+    .concept-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .concept-card:hover {
+      border-color: var(--amber);
+      transform: translateY(-4px);
+    }
+    .concept-card.recommended {
+      border: 2px solid var(--amber);
+      box-shadow: 0 0 30px rgba(245, 158, 11, 0.2);
+    }
+
+    .concept-header {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.02);
+    }
+    .concept-num {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--amber);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .concept-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin-top: 2px;
+    }
+    .rec-pill {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      background: var(--amber);
+      color: #000;
+      border-radius: 99px;
+    }
+
+    .img-container {
+      width: 100%;
+      background: #000;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+      cursor: zoom-in;
+    }
+    .img-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: opacity 0.2s;
+    }
+    .img-container:hover img {
+      opacity: 0.92;
+    }
+
+    .concept-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      flex-grow: 1;
+    }
+    .palette {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .palette-label {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 600;
+      margin-right: 4px;
+    }
+    .swatch {
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .desc {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+    .traits {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 0.88rem;
+    }
+    .traits li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .traits li span { color: var(--amber); font-weight: bold; }
+
+    .btn-select {
+      margin-top: auto;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: #fff;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+    .btn-select:hover {
+      background: var(--amber);
+      color: #000;
+      border-color: var(--amber);
+    }
+    .concept-card.recommended .btn-select {
+      background: var(--amber);
+      color: #000;
+      border-color: var(--amber);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="badge">FUN BY ACCIDENT · GÖRSEL KONSEPT VİTRİNİ</div>
+      <h1>Hangi Tasarım Çizgisini Seçelim?</h1>
+      <p class="lead">
+        Yapay zeka morundan arındırılmış, stüdyonuzun orijinal logosu ve sadeleştirilmiş oyun kartlarıyla hazırlanan 4 alternatif.
+      </p>
+    </header>
+
+    <div class="concepts-grid">
+      <!-- Konsept 1 -->
+      <article class="concept-card recommended">
+        <div class="concept-header">
+          <div>
+            <div class="concept-num">Konsept 01</div>
+            <h2 class="concept-title">Warm Amber &amp; Charcoal</h2>
+          </div>
+          <span class="rec-pill">Önerilen</span>
+        </div>
+        <div class="img-container">
+          <a href="assets/concepts/concept_1_warm_amber.png" target="_blank" title="Büyük boyutta görmek için tıklayın">
+            <img src="assets/concepts/concept_1_warm_amber.png" alt="Konsept 1: Warm Amber">
+          </a>
+        </div>
+        <div class="concept-body">
+          <div class="palette">
+            <span class="palette-label">Renkler:</span>
+            <span class="swatch" style="background: #0e1014;" title="Kömür Siyahı #0e1014"></span>
+            <span class="swatch" style="background: #f59e0b;" title="Sıcak Amber #f59e0b"></span>
+            <span class="swatch" style="background: #fbbf24;" title="Altın Sarısı #fbbf24"></span>
+            <span class="swatch" style="background: #fef3c7;" title="Krem Beyazı #fef3c7"></span>
+          </div>
+          <p class="desc">
+            Logonuzdaki sarı/turuncu kıvılcımla ve <em>Fener Pazarı</em>'nın sıcak liman ışıklarıyla %100 uyumlu, samimi, organik ve kaliteli bir indie stüdyo atmosferi.
+          </p>
+          <ul class="traits">
+            <li><span>✓</span> Klei (Don't Starve) &amp; Supergiant (Hades) samimiyeti</li>
+            <li><span>✓</span> Mor neon yok, sıcak kömür ve kehribar ışığı</li>
+            <li><span>✓</span> Sadeleştirilmiş oyun kartları ve doğrudan indirme butonları</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Konsept 2 -->
+      <article class="concept-card">
+        <div class="concept-header">
+          <div>
+            <div class="concept-num">Konsept 02</div>
+            <h2 class="concept-title">Devolver / Indie Punk</h2>
+          </div>
+        </div>
+        <div class="img-container">
+          <a href="assets/concepts/concept_2_indie_punk.png" target="_blank" title="Büyük boyutta görmek için tıklayın">
+            <img src="assets/concepts/concept_2_indie_punk.png" alt="Konsept 2: Indie Punk">
+          </a>
+        </div>
+        <div class="concept-body">
+          <div class="palette">
+            <span class="palette-label">Renkler:</span>
+            <span class="swatch" style="background: #070708;" title="Mat Siyah #070708"></span>
+            <span class="swatch" style="background: #f4f4f5;" title="Tebeşir Beyazı"></span>
+            <span class="swatch" style="background: #facc15;" title="Elektrik Sarısı #facc15"></span>
+          </div>
+          <p class="desc">
+            Devolver Digital ve Landfall Games tarzı. Süs ve gradyan yok; cesur, cüretkâr, büyük tipografi ve poster ızgarasıyla saf oyuncu ruhu.
+          </p>
+          <ul class="traits">
+            <li><span>✓</span> Sıfır yapay zeka hissi, tam bağımsız punk tavır</li>
+            <li><span>✓</span> Geniş poster bantları ve yüksek kontrast</li>
+            <li><span>✓</span> Sadece 1 satır açıklama ve doğrudan eylem butonları</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Konsept 3 -->
+      <article class="concept-card">
+        <div class="concept-header">
+          <div>
+            <div class="concept-num">Konsept 03</div>
+            <h2 class="concept-title">Nordic Clean / Modern</h2>
+          </div>
+        </div>
+        <div class="img-container">
+          <a href="assets/concepts/concept_3_nordic_clean.png" target="_blank" title="Büyük boyutta görmek için tıklayın">
+            <img src="assets/concepts/concept_3_nordic_clean.png" alt="Konsept 3: Nordic Clean">
+          </a>
+        </div>
+        <div class="concept-body">
+          <div class="palette">
+            <span class="palette-label">Renkler:</span>
+            <span class="swatch" style="background: #0b0e14;" title="Slate #0b0e14"></span>
+            <span class="swatch" style="background: #141924;" title="Grafit"></span>
+            <span class="swatch" style="background: #38bdf8;" title="Buz Mavisi #38bdf8"></span>
+            <span class="swatch" style="background: #f8fafc;" title="Platin Beyazı"></span>
+          </div>
+          <p class="desc">
+            Ustwo Games (Monument Valley) ve PlayStation vitrinleri gibi ferah, ağırbaşlı, sakin ve kurumsal stüdyo duruşu.
+          </p>
+          <ul class="traits">
+            <li><span>✓</span> Bol nefes alan boşluklar ve rafine tipografi</li>
+            <li><span>✓</span> Sade, dengeli simetrik kartlar</li>
+            <li><span>✓</span> Ağırbaşlı ve prestijli kurumsal kimlik</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Konsept 4 -->
+      <article class="concept-card">
+        <div class="concept-header">
+          <div>
+            <div class="concept-num">Konsept 04</div>
+            <h2 class="concept-title">Retro Arcade &amp; Pixel Indie</h2>
+          </div>
+        </div>
+        <div class="img-container">
+          <a href="assets/concepts/concept_4_retro_arcade.png" target="_blank" title="Büyük boyutta görmek için tıklayın">
+            <img src="assets/concepts/concept_4_retro_arcade.png" alt="Konsept 4: Retro Arcade">
+          </a>
+        </div>
+        <div class="concept-body">
+          <div class="palette">
+            <span class="palette-label">Renkler:</span>
+            <span class="swatch" style="background: #121318;" title="CRT Siyahı #121318"></span>
+            <span class="swatch" style="background: #fbbf24;" title="Piksel Sarısı #fbbf24"></span>
+            <span class="swatch" style="background: #10b981;" title="Zümrüt Yeşili #10b981"></span>
+          </div>
+          <p class="desc">
+            Eski arcade salonları ve bağımsız oyun geliştirme (itch.io / game jam) kültürünü yansıtan nostaljik ve son derece sempatik çizgi.
+          </p>
+          <ul class="traits">
+            <li><span>✓</span> Hafif ızgara dokusu ve arcade rozetleri</li>
+            <li><span>✓</span> Piksel sanatına göz kırpan eğlenceli ruh</li>
+            <li><span>✓</span> Samimi ve oyuncu dostu tasarım dili</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</body>
+</html>
