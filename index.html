@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fun By Accident – Bağımsız Oyun Stüdyosu | Independent Game Studio</title>
-  <meta name="description" content="Fun By Accident – İstanbul merkezli bağımsız oyun stüdyosu. Orc & Bone Horde Survivor ve yenilikçi mobil oyunların geliştiricisi.">
-  <meta name="keywords" content="Fun By Accident, oyun stüdyosu, indie game studio, Orc and Bone Horde Survivor, mobil oyun, roguelite, survivor, istanbul">
+  <meta name="description" content="Fun By Accident – İstanbul merkezli bağımsız oyun stüdyosu. Orc & Bone Horde Survivor ve Fener Pazarı gibi yenilikçi ve keyifli bağımsız oyunların geliştiricisi.">
+  <meta name="keywords" content="Fun By Accident, oyun stüdyosu, indie game studio, Orc and Bone Horde Survivor, Fener Pazarı, Lantern Market, mobil oyun, roguelite, survivor, istanbul">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/favicon.png">
   
@@ -13,7 +13,8 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.funbyaccident.com/">
   <meta property="og:title" content="Fun By Accident – Independent Game Studio">
-  <meta property="og:description" content="Makers of Orc & Bone Horde Survivor. Crafting worlds where fun happens by accident.">
+  <meta property="og:description" content="Eğlencenin 'Tesadüf' olmadığı dünyalar tasarlıyoruz. Bağımsız oyun stüdyosu, İstanbul.">
+  <meta property="og:image" content="https://www.funbyaccident.com/assets/logo.png">
   <meta property="twitter:card" content="summary_large_image">
 
   <link rel="stylesheet" href="style.css">
@@ -24,7 +25,6 @@
   <canvas id="ambient-canvas"></canvas>
   <div class="ambient-glow ambient-glow-1"></div>
   <div class="ambient-glow ambient-glow-2"></div>
-  <div class="ambient-glow ambient-glow-3"></div>
   <div class="grid-overlay"></div>
 
   <!-- Navigation -->
@@ -64,11 +64,11 @@
       </div>
 
       <h1 class="hero-title">
-        Eğlencenin <span class="gradient-text">"Tesadüf"</span> Olmadığı Dünyalar Tasarlıyoruz.
+        Eğlencenin <span>Tesadüf</span> Olmadığı Dünyalar.
       </h1>
 
       <p class="hero-description">
-        Fun By Accident, saf oynanış zevkine, bağımlılık yaratan roguelike mekaniklerine ve akıcı dövüş sistemlerine odaklanan bağımsız bir oyun geliştirme stüdyosudur.
+        Akıcı dövüş sistemleri, bağımlılık yapan roguelike döngüleri ve sıcacık simülasyonlar üretiyoruz.
       </p>
 
       <div class="hero-actions">
@@ -123,194 +123,106 @@
         <button class="filter-tab" data-filter="upcoming">Yakında / Geliştirilen</button>
       </div>
 
-      <!-- Game 1: Orc & Bone Horde Survivor -->
-      <article class="featured-game-card game-card-item" data-category="live">
-        <div class="game-art-side">
-          <div class="game-art-bg-pattern"></div>
-          <div class="game-art-badge-top">
-            <span class="badge-pulse-dot"></span>
-            Google Play'de Yayında
-          </div>
-          
-          <div class="game-art-visual">
-            <img src="assets/games/orc-and-bone.png" alt="Orc & Bone Horde Survivor Logo" class="game-icon-img">
-            <div class="game-art-tagline">3D Horde Survival · Action Roguelite</div>
-          </div>
-        </div>
-
-        <div class="game-info-side">
-          <div class="game-tags">
-            <span class="game-tag">Godot 4</span>
-            <span class="game-tag">Aksiyon Roguelite</span>
-            <span class="game-tag">3D Bullet Heaven</span>
-            <span class="game-tag">Mobile</span>
-          </div>
-
-          <h3 class="game-title">Orc &amp; Bone Horde Survivor</h3>
-
-          <p class="game-summary">
-            Karanlık fantezi evreninde, binlerce iskelet ve goblin ordusuna karşı durmaksızın hayatta kalın! Alexander (yüksek hasar) ve Tomris (hızlı sıyrılma) kahramanlarıyla savaşın, XP toplayarak ölümcül yetenek kombinasyonları oluşturun ve her 10 dalgada yükselen taş sütunlu Boss Arenası'nda efsanevi bossları alt edin.
-          </p>
-
-          <ul class="game-highlights-list">
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              3D Bullet Heaven &amp; geniş arena
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Alexander &amp; Tomris oynanabilir sınıfları
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Her 10 dalgada kalkan Boss Arenası
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Kalıcı dükkân (Shop) ve yetenek ağacı
-            </li>
-          </ul>
-
-          <div class="game-store-buttons">
-            <!-- Google Play Store Button -->
-            <a href="https://play.google.com/store/search?q=Orc%20Bone%20Horde%20Survivor&c=apps" target="_blank" rel="noopener noreferrer" class="btn-store">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M3.609 1.814L13.792 12 3.61 22.186A2.25 2.25 0 0 1 3 20.655V3.345c0-.58.225-1.125.609-1.531zm11.242 11.244L17.22 10.74l-2.37-2.37-1.059 1.059 1.06 3.629zm1.758-3.086l2.97 1.713c.84.484.84 1.272 0 1.756l-2.97 1.714-1.748-1.748 1.748-1.735zm-2.817-2.817l-9.87-9.87a2.298 2.298 0 0 1 .869-.195c.575 0 1.135.215 1.58.66l7.421 7.405zm0 9.688l-7.421 7.405a2.297 2.297 0 0 1-1.58.66 2.298 2.298 0 0 1-.869-.195l9.87-9.87z"/>
-              </svg>
-              <div class="btn-text-group">
-                <span class="btn-sub">Hemen İndir</span>
-                <span class="btn-main">Google Play</span>
-              </div>
-            </a>
-
-            <!-- App Store Button -->
-            <a href="#contact" class="btn-store" title="App Store sürümü yakında">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 0.92-2.87-.93.04-2.02.63-2.66 1.38-.56.65-1.06 1.72-.92 2.75 1.05.08 2.06-.51 2.66-1.26z"/>
-              </svg>
-              <div class="btn-text-group">
-                <span class="btn-sub">Yakında</span>
-                <span class="btn-main">App Store</span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Game 2: Fener Pazarı / Lantern Market -->
-      <article class="featured-game-card card-theme-cozy game-card-item" data-category="upcoming">
-        <div class="game-art-side game-art-cozy">
-          <div class="game-art-cozy-pattern"></div>
-          <div class="game-art-badge-top badge-cozy">
-            <span class="badge-pulse-dot" style="background:#fbbf24; box-shadow:0 0 10px #fbbf24;"></span>
-            Yayına Hazırlanıyor
-          </div>
-          
-          <div class="game-art-visual">
-            <img src="assets/games/lantern-market.png" alt="Fener Pazarı Logo" class="game-icon-img">
-            <div class="game-art-tagline" style="color: #fbbf24;">Cozy 2D Idle Tycoon · Night Market</div>
-          </div>
-        </div>
-
-        <div class="game-info-side">
-          <div class="game-tags">
-            <span class="game-tag">Godot 4.7</span>
-            <span class="game-tag">Cozy Tycoon</span>
-            <span class="game-tag">Piksel Sanat</span>
-            <span class="game-tag">Idle Simülasyon</span>
-            <span class="game-tag">Reklamsız</span>
-          </div>
-
-          <h3 class="game-title">Fener Pazarı <span style="font-size:1.1rem; color:var(--text-muted); font-weight:500;">/ Lantern Market</span></h3>
-
-          <p class="game-summary">
-            Akşam çökerken fenerleri yakın ve iskelede kendi huzurlu gece pazarınızı işletin! Çay ocağı, simitçi, közde mısır, kestaneci, balık ekmek, kumpir, dondurmacı ve lokum &amp; kahve: 8 sokak lezzeti tezgâhını kurun. Komşuluk sinerjileri (+%25 bonus), vapur dalgaları, martılar ve liman kedisiyle yaşayan samimi bir liman kasabası.
-          </p>
-
-          <ul class="game-highlights-list">
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              8 Sokak lezzeti tezgâhı &amp; komşu sinerjisi
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Vapur dalgaları, martılar &amp; liman kedisi
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              20 saniyelik 'Fener Şöleni' &amp; ritim çarpanı
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Karaköy, Moda, Foça &amp; Amasra hedefleri
-            </li>
-          </ul>
-
-          <div class="game-store-buttons">
-            <!-- App Store Button -->
-            <a href="#contact" class="btn-store" title="App Store çıkışına hazırlanıyor" style="border-color: rgba(245, 158, 11, 0.35);">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 0.92-2.87-.93.04-2.02.63-2.66 1.38-.56.65-1.06 1.72-.92 2.75 1.05.08 2.06-.51 2.66-1.26z"/>
-              </svg>
-              <div class="btn-text-group">
-                <span class="btn-sub">Çok Yakında</span>
-                <span class="btn-main">App Store</span>
-              </div>
-            </a>
-
-            <!-- Google Play Store Button -->
-            <a href="#contact" class="btn-store" title="Google Play çıkışına hazırlanıyor" style="border-color: rgba(245, 158, 11, 0.35);">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M3.609 1.814L13.792 12 3.61 22.186A2.25 2.25 0 0 1 3 20.655V3.345c0-.58.225-1.125.609-1.531zm11.242 11.244L17.22 10.74l-2.37-2.37-1.059 1.059 1.06 3.629zm1.758-3.086l2.97 1.713c.84.484.84 1.272 0 1.756l-2.97 1.714-1.748-1.748 1.748-1.735zm-2.817-2.817l-9.87-9.87a2.298 2.298 0 0 1 .869-.195c.575 0 1.135.215 1.58.66l7.421 7.405zm0 9.688l-7.421 7.405a2.297 2.297 0 0 1-1.58.66 2.298 2.298 0 0 1-.869-.195l9.87-9.87z"/>
-              </svg>
-              <div class="btn-text-group">
-                <span class="btn-sub">Çok Yakında</span>
-                <span class="btn-main">Google Play</span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Secondary Projects in Development Grid -->
+      <!-- Main Games Grid -->
       <div class="games-grid">
-        <!-- Upcoming Game 1 -->
-        <article class="sub-game-card game-card-item" data-category="upcoming">
-          <div class="status-badge status-dev">
-            <span class="badge-pulse-dot" style="background:#facc15; box-shadow:0 0 10px #facc15;"></span>
-            Konsept &amp; Prototipleme
+        <!-- Game 1: Orc & Bone Horde Survivor -->
+        <article class="clean-game-card game-card-item" data-category="live">
+          <div class="game-card-top">
+            <img src="assets/games/orc-and-bone.png" alt="Orc & Bone Horde Survivor" class="game-thumb">
+            <div class="game-meta-group">
+              <div class="game-badge-row">
+                <span class="game-tag-pill">Aksiyon Roguelite · Godot 4</span>
+                <span class="status-dot-tag">
+                  <span class="badge-pulse-dot" style="background:#10b981; box-shadow:0 0 6px #10b981;"></span>
+                  Google Play'de Yayında
+                </span>
+              </div>
+              <h3 class="clean-game-title">Orc &amp; Bone Horde Survivor</h3>
+            </div>
           </div>
-          <h4 class="sub-game-title">Gizli Projeler &amp; Yeni Fikirler</h4>
-          <p class="sub-game-desc">
-            Fun By Accident felsefesiyle üretilen deneysel oynanış mekanikleri, hızlı arcade prototipleri ve yeni mobil deneyimler. Stüdyomuzun mutfağında pişen yeni oyunlar tamamlandıkça burada yerini alacak.
+          <p class="clean-game-desc">
+            Karanlık fantezi arenasında, binlerce iskelet ve goblin ordusuna karşı durmaksızın hayatta kal. Sürpriz yetenek sinerjileri, akıcı 3D savaş mekanikleri ve yükselen Boss Arenası.
           </p>
-          <div class="sub-game-footer">
-            <span>Godot Engine / Mobil</span>
-            <span style="color: var(--accent-yellow); font-weight: 600;">In The Kitchen</span>
+          <div class="game-action-row">
+            <a href="https://play.google.com/store/search?q=Orc%20Bone%20Horde%20Survivor&c=apps" target="_blank" rel="noopener noreferrer" class="btn-store primary">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3.609 1.814L13.792 12 3.61 22.186A2.25 2.25 0 0 1 3 20.655V3.345c0-.58.225-1.125.609-1.531zm11.242 11.244L17.22 10.74l-2.37-2.37-1.059 1.059 1.06 3.629zm1.758-3.086l2.97 1.713c.84.484.84 1.272 0 1.756l-2.97 1.714-1.748-1.748 1.748-1.735zm-2.817-2.817l-9.87-9.87a2.298 2.298 0 0 1 .869-.195c.575 0 1.135.215 1.58.66l7.421 7.405zm0 9.688l-7.421 7.405a2.297 2.297 0 0 1-1.58.66 2.298 2.298 0 0 1-.869-.195l9.87-9.87z"/>
+              </svg>
+              <span>Google Play</span>
+            </a>
+            <a href="#contact" class="btn-store">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 0.92-2.87-.93.04-2.02.63-2.66 1.38-.56.65-1.06 1.72-.92 2.75 1.05.08 2.06-.51 2.66-1.26z"/>
+              </svg>
+              <span>App Store (Yakında)</span>
+            </a>
           </div>
         </article>
 
-        <!-- Upcoming Game 2 -->
-        <article class="sub-game-card game-card-item" data-category="upcoming">
-          <div class="status-badge status-proto">
-            <span class="badge-pulse-dot" style="background:#c084fc; box-shadow:0 0 10px #c084fc;"></span>
-            Geliştirici Günlüğü
+        <!-- Game 2: Fener Pazarı / Lantern Market -->
+        <article class="clean-game-card highlight game-card-item" data-category="upcoming">
+          <div class="game-card-top">
+            <img src="assets/games/lantern-market.png" alt="Fener Pazarı / Lantern Market" class="game-thumb">
+            <div class="game-meta-group">
+              <div class="game-badge-row">
+                <span class="game-tag-pill" style="color: var(--accent-amber-light);">Cozy Idle Tycoon · Piksel Sanat</span>
+                <span class="status-dot-tag upcoming">
+                  <span class="badge-pulse-dot" style="background:#fbbf24; box-shadow:0 0 6px #fbbf24;"></span>
+                  Yayına Hazırlanıyor
+                </span>
+              </div>
+              <h3 class="clean-game-title">Fener Pazarı <span>/ Lantern Market</span></h3>
+            </div>
           </div>
-          <h4 class="sub-game-title">Bağımsız Oyun Geliştirme Yolculuğu</h4>
-          <p class="sub-game-desc">
-            İstanbul'dan küresel oyuncu kitlesine ulaşan projelerimiz; mobil optimizasyon, akıcı fizik sistemleri ve eğlenceli sinerji mekaniklerinin sahne arkası.
+          <p class="clean-game-desc">
+            Liman iskelesinde fenerlerin ışığında sakin bir gece pazarı işletin. Sokak lezzetleri tezgâhları, komşu sinerjileri, vapur kalabalığı ve liman kedisiyle yaşayan sıcak bir kasaba.
           </p>
-          <div class="sub-game-footer">
-            <span>Topluluk &amp; Paylaşım</span>
-            <span style="color: var(--accent-purple-light); font-weight: 600;">Stay Tuned</span>
+          <div class="game-action-row">
+            <a href="#contact" class="btn-store primary">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 0.92-2.87-.93.04-2.02.63-2.66 1.38-.56.65-1.06 1.72-.92 2.75 1.05.08 2.06-.51 2.66-1.26z"/>
+              </svg>
+              <span>Yakında · App Store</span>
+            </a>
+            <a href="#contact" class="btn-store">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3.609 1.814L13.792 12 3.61 22.186A2.25 2.25 0 0 1 3 20.655V3.345c0-.58.225-1.125.609-1.531zm11.242 11.244L17.22 10.74l-2.37-2.37-1.059 1.059 1.06 3.629zm1.758-3.086l2.97 1.713c.84.484.84 1.272 0 1.756l-2.97 1.714-1.748-1.748 1.748-1.735zm-2.817-2.817l-9.87-9.87a2.298 2.298 0 0 1 .869-.195c.575 0 1.135.215 1.58.66l7.421 7.405zm0 9.688l-7.421 7.405a2.297 2.297 0 0 1-1.58.66 2.298 2.298 0 0 1-.869-.195l9.87-9.87z"/>
+              </svg>
+              <span>Google Play</span>
+            </a>
           </div>
+        </article>
+      </div>
+
+      <!-- Secondary Labs Strip -->
+      <div class="secondary-labs-grid">
+        <article class="lab-mini-card game-card-item" data-category="upcoming">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:0.75rem; font-weight:700; color:var(--accent-amber); text-transform:uppercase; letter-spacing:0.05em;">Laboratuvar &amp; Prototip</span>
+            <span style="font-size:0.75rem; color:var(--accent-amber-light); font-weight:600;">Mutfakta Pişiyor</span>
+          </div>
+          <h4 class="lab-mini-title">Yeni Fikirler &amp; Arcade Deneyler</h4>
+          <p class="lab-mini-desc">
+            Fun By Accident felsefesiyle üretilen deneysel oynanış mekanikleri, hızlı arcade prototipleri ve yeni mobil deneyimler.
+          </p>
+        </article>
+
+        <article class="lab-mini-card game-card-item" data-category="upcoming">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:0.75rem; font-weight:700; color:var(--accent-amber); text-transform:uppercase; letter-spacing:0.05em;">Geliştirici Günlüğü</span>
+            <span style="font-size:0.75rem; color:var(--text-muted); font-weight:600;">Devlog</span>
+          </div>
+          <h4 class="lab-mini-title">Bağımsız Oyun Geliştirme Yolculuğu</h4>
+          <p class="lab-mini-desc">
+            İstanbul'dan küresel oyuncu kitlesine: Mobil optimizasyon, Godot 4 mimarisi ve eğlenceli oyun dengelerinin sahne arkası.
+          </p>
         </article>
       </div>
     </div>
   </section>
 
   <!-- About Us Section -->
-  <section class="section-wrapper" id="about" style="background: rgba(14, 18, 28, 0.4);">
+  <section class="section-wrapper" id="about">
     <div class="container">
       <div class="about-grid">
         <div class="about-text-block">
@@ -328,19 +240,19 @@
         </div>
 
         <div class="contact-card" style="padding: 36px 30px; text-align: left;">
-          <h4 style="font-size: 1.3rem; margin-bottom: 14px; color: var(--accent-cyan-light);">Stüdyo Vizyonumuz</h4>
+          <h4 style="font-size: 1.3rem; margin-bottom: 14px; color: var(--accent-amber-light);">Stüdyo Vizyonumuz</h4>
           <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
             Sadece oyun üretmiyoruz; oyuncuların defalarca geri dönmek isteyeceği, topluluk geri bildirimleriyle sürekli yaşayan ve gelişen dünyalar kurguluyoruz.
           </p>
           <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px;">
             <li style="display:flex; align-items:center; gap:10px; font-size:0.92rem;">
-              <span style="color:var(--accent-purple);">✔</span> İstanbul'dan dünyaya ulaşan bağımsız vizyon
+              <span style="color:var(--accent-amber); font-weight:bold;">✔</span> İstanbul'dan dünyaya ulaşan bağımsız vizyon
             </li>
             <li style="display:flex; align-items:center; gap:10px; font-size:0.92rem;">
-              <span style="color:var(--accent-purple);">✔</span> Hızlı yineleme ve kesintisiz geliştirme süreci
+              <span style="color:var(--accent-amber); font-weight:bold;">✔</span> Hızlı yineleme ve kesintisiz geliştirme süreci
             </li>
             <li style="display:flex; align-items:center; gap:10px; font-size:0.92rem;">
-              <span style="color:var(--accent-purple);">✔</span> Oyuncu deneyimini her şeyin üzerinde tutan felsefe
+              <span style="color:var(--accent-amber); font-weight:bold;">✔</span> Oyuncu deneyimini her şeyin üzerinde tutan felsefe
             </li>
           </ul>
         </div>
@@ -446,7 +358,7 @@
 
   <!-- Toast Message -->
   <div class="toast-msg" id="toast">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5">
       <polyline points="20 6 9 17 4 12"></polyline>
     </svg>
     <span>E-posta adresi panoya kopyalandı!</span>
@@ -454,7 +366,7 @@
 
   <!-- Interactive Background and Functionality Script -->
   <script>
-    // Particle Canvas Animation
+    // Amber Firefly Particle Canvas Animation
     (function initCanvas() {
       const canvas = document.getElementById('ambient-canvas');
       if (!canvas) return;
@@ -467,17 +379,17 @@
         height = canvas.height = window.innerHeight;
       });
 
-      const particleCount = Math.min(Math.floor(width / 24), 50);
+      const particleCount = Math.min(Math.floor(width / 26), 45);
       const particles = [];
 
       for (let i = 0; i < particleCount; i++) {
         particles.push({
           x: Math.random() * width,
           y: Math.random() * height,
-          radius: Math.random() * 1.8 + 0.6,
-          vx: (Math.random() - 0.5) * 0.35,
-          vy: (Math.random() - 0.5) * 0.35,
-          alpha: Math.random() * 0.5 + 0.2
+          radius: Math.random() * 1.6 + 0.6,
+          vx: (Math.random() - 0.5) * 0.3,
+          vy: (Math.random() - 0.5) * 0.3,
+          alpha: Math.random() * 0.45 + 0.15
         });
       }
 
@@ -496,7 +408,7 @@
 
           ctx.beginPath();
           ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(167, 139, 250, ${p.alpha})`;
+          ctx.fillStyle = `rgba(251, 191, 36, ${p.alpha})`;
           ctx.fill();
         }
 
@@ -531,7 +443,7 @@
         const filter = tab.dataset.filter;
         gameCards.forEach(card => {
           if (filter === 'all' || card.dataset.category === filter) {
-            card.style.display = card.classList.contains('featured-game-card') ? 'grid' : 'flex';
+            card.style.display = 'flex';
           } else {
             card.style.display = 'none';
           }
