@@ -625,6 +625,50 @@ h1, h2, h3, h4 {
   padding: 30px;
 }
 
+.game-icon-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 28px;
+  object-fit: cover;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+  margin: 0 auto 16px;
+}
+
+.featured-game-card:hover .game-icon-img {
+  transform: scale(1.05) translateY(-2px);
+}
+
+.card-theme-cozy {
+  border-color: rgba(245, 158, 11, 0.25);
+}
+
+.card-theme-cozy:hover {
+  border-color: rgba(245, 158, 11, 0.55);
+  box-shadow: 0 0 35px -5px rgba(245, 158, 11, 0.25), var(--shadow-card);
+}
+
+.game-art-cozy {
+  background: linear-gradient(135deg, #2e1a0e 0%, #111422 100%) !important;
+}
+
+.game-art-cozy-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.35;
+  background-image: 
+    radial-gradient(circle at 30% 30%, rgba(245, 158, 11, 0.6) 0%, transparent 60%),
+    radial-gradient(circle at 80% 80%, rgba(249, 115, 22, 0.45) 0%, transparent 60%) !important;
+}
+
+.badge-cozy {
+  background: rgba(245, 158, 11, 0.18) !important;
+  border-color: rgba(245, 158, 11, 0.4) !important;
+  color: #fbbf24 !important;
+}
+
 .game-icon-large {
   width: 110px;
   height: 110px;
